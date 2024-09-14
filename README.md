@@ -70,12 +70,6 @@ Este proyecto es un **Proof of Concept (POC)** para aprender Python y explorar l
 
 ---
 
-## 🤝 **Contribuciones**
-
-¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar el juego, no dudes en enviar un PR.
-
----
-
 ## 📄 **Licencia**
 
 Este proyecto está bajo la Licencia MIT - ¡disfruta contribuyendo y jugando! 📜
