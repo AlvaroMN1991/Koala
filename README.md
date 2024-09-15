@@ -61,9 +61,9 @@ Este proyecto es un **Proof of Concept (POC)** para aprender Python y explorar l
 
 ## 🏗️ **Plan de desarrollo**
 
-- [] Implementación de la mecánica de movimiento del koala (cubo) 🟥
-- [] Generación del escenario 3D 🌍
-- [] Colocación de monedas 🪙
+- [ ] Implementación de la mecánica de movimiento del koala (cubo) 🟥
+- [ ] Generación del escenario 3D 🌍
+- [ ] Colocación de monedas 🪙
 - [ ] Introducción del enemigo 🕵️‍♂️
 - [ ] Sistema de puntuaciones y vidas ❤️
 
