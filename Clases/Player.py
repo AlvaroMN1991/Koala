@@ -1,33 +1,35 @@
-from ursina import Entity, color, held_keys, time, Vec3
+from ursina import Entity, color, held_keys, time, Vec3 #type: ignore
 
 #Cargar Textura
 koala_texture = 'koala_texture.png'
+koala_model = "koala.obj"
 
 # Clase Jugador
 class Player(Entity):
-    def __init__(self, player_number, game_state, **kwargs):
+    #def __init__(self, player_number, game_state, **kwargs):
+    def __init__(self, **kwargs):    
         super().__init__(
             model='cube',
             texture=koala_texture,
             collider='box',
-            scale=1,
+            scale=1.5,
             **kwargs)
-        self.player_number = player_number
+        #self.player_number = player_number
         self.speed = 5
         self.coins_collected = 0
         self.hits = 0  # Número de veces que el jugador ha sido tocado por el enemigo
-        self.game_state = game_state
+        #self.game_state = game_state
 
         # Asignar teclas de control según el número de jugador
-        if self.player_number == 1:
-            self.move_keys = {'up': 'w', 'down': 's', 'left': 'a', 'right': 'd'}
-            self.color = color.blue
-        elif self.player_number == 2:
-            self.move_keys = {'up': 'up arrow', 'down': 'down arrow', 'left': 'left arrow', 'right': 'right arrow'}
-            self.color = color.red
+        #if self.player_number == 1:
+        self.move_keys = {'up': 'w', 'down': 's', 'left': 'a', 'right': 'd'}
+        self.color = color.blue
+        #elif self.player_number == 2:
+        #    self.move_keys = {'up': 'up arrow', 'down': 'down arrow', 'left': 'left arrow', 'right': 'right arrow'}
+        # self.color = color.red
 
     def update(self):
-        if self.game_state == 'GAME':
+        #if self.game_state == 'GAME':
             self.move()
 
     def move(self):

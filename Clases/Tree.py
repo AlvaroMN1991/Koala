@@ -1,4 +1,4 @@
-from ursina import Entity, random
+from ursina import Entity, random #type: ignore
 
 tree_texture = 'tree_texture.png'
 

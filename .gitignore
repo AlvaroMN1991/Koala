@@ -1,1 +1,4 @@
 /Clases/__pycache__/
+/.vscode
+/models_compressed
+/.mypy_cache

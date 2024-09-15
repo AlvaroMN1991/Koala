@@ -37,7 +37,7 @@ Este proyecto es un **Proof of Concept (POC)** para aprender Python y explorar l
     ```
 4. Ejecuta el juego:
     ```bash
-    python main.py
+    python koala.py
     ```
 
 ---
@@ -61,9 +61,9 @@ Este proyecto es un **Proof of Concept (POC)** para aprender Python y explorar l
 
 ## 🏗️ **Plan de desarrollo**
 
-- [x] Implementación de la mecánica de movimiento del koala (cubo) 🟥
-- [x] Generación del escenario 3D 🌍
-- [x] Colocación de monedas 🪙
+- [] Implementación de la mecánica de movimiento del koala (cubo) 🟥
+- [] Generación del escenario 3D 🌍
+- [] Colocación de monedas 🪙
 - [ ] Introducción del enemigo 🕵️‍♂️
 - [ ] Sistema de puntuaciones y vidas ❤️
 
