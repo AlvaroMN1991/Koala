@@ -1,7 +1,7 @@
 from ursina import Entity, color, held_keys, time, Vec3 #type: ignore
 
 #Cargar Textura
-koala_texture = 'koala_texture.png'
+koala_texture = 'koala_texture.jpg'
 koala_model = "koala.obj"
 
 # Clase Jugador
@@ -12,12 +12,17 @@ class Player(Entity):
             model='cube',
             texture=koala_texture,
             collider='box',
+            color=color.white,
+            disable_cast_shadows=True,  # Desactivar sombras            
             scale=1.5,
             **kwargs)
         #self.player_number = player_number
         self.speed = 5
+        self.move_direction = Vec3(0, 0, 0)
         self.coins_collected = 0
         self.hits = 0  # Número de veces que el jugador ha sido tocado por el enemigo
+        self.previous_position = self.position  # Guardar la posición previa
+        self.lives = 3
         #self.game_state = game_state
 
         # Asignar teclas de control según el número de jugador
@@ -33,6 +38,8 @@ class Player(Entity):
             self.move()
 
     def move(self):
+        # Guardar la posición anterior antes de mover al jugador
+        self.previous_position = self.position
         move_direction = Vec3(
             (held_keys[self.move_keys['right']] - held_keys[self.move_keys['left']]),
             0,
